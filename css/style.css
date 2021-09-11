@@ -1,0 +1,148 @@
+:root {
+    --dark-blue: hsl(222,40%,13%);
+    --desatured-blue: hsl(223,39%,20%);
+    --bright-blue: hsl(211,99%,49%);
+
+    --white: hsl(225,31%,92%);
+    --gray: hsl(219,14%,62%);
+    --dark-gray: hsl(225,19%,36%);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--dark-blue);
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+    display: block;
+    justify-content: center;
+    width: 800px;
+    margin: 15vh auto;
+}
+a {
+    color: var(--bright-blue);
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+}
+header .title {
+    font-size: 25px;
+}
+header .dark-light-mode {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+header i {
+    margin-left: 10px;
+}
+
+/* Search Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    background-color: var(--desatured-blue);
+    border-radius: 15px;
+    padding: 10px 15px;
+    align-items: center;
+}
+.search-input i {
+    color: var(--bright-blue);
+    font-size: 20px;
+    margin-right: 10px;
+}
+.search-input input {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    font-size: 15px;
+    color: var(--gray);
+}
+.btn-search input {
+    background-color: var(--bright-blue);
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 13px 20px;
+}
+
+/* User Info*/
+section {
+    background-color: var(--desatured-blue);
+    border-radius: 15px;
+}
+.content {
+    display: flex;
+    padding: 40px;
+}
+.github-user-info {
+    width: 100%;
+    margin-left: 30px;
+}
+.user-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-name h3 {
+    font-size: 25px;
+}
+
+.user-bio {
+    margin: 20px 0;
+    color: var(--dark-gray);
+}
+
+.user-repo-follows {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 15px 5px;
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+}
+.user-repo-follows span {
+    font-size: 14px;
+    color: var(--gray);
+}
+.user-repo-follows p {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.user-links-orgs {
+    display: flex;
+    margin: 25px 0;
+    font-size: 18px;
+}
+.user-links-orgs i {
+     margin-right: 10px;
+}
+.user-links-orgs span {
+    color: var(--gray);
+}
+.social-one {
+    margin-right: 150px;
+}
+
+.github-image img {
+    object-fit: cover;
+    width: 125px;
+    height: 125px;
+    border-radius: 65px;
+}
