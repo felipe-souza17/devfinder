@@ -24,63 +24,63 @@
     <nav class="navbar">
         <div class="search-input">
             <i class="fas fa-search"></i>
-            <input type="text" class="input-user" placeholder="Search GitHub username..." autofocus>
+            <input type="text" class="input-user" id="inputElement" placeholder="Search GitHub username..." autofocus>
         </div>
         <div class="btn-search">
-            <input type="button" value="Search">
+            <input type="button" id="btnElement" value="Search">
         </div>
     </nav>
     <section>
         <div class="content">
             <div class="github-image">
-                <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Imagem do perfil do usuário">
+                <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Imagem do perfil do usuário" id="avatar_url">
             </div>
             <div class="github-user-info">
                 <div class="user-about">
                     <div class="user-name">
-                        <h3>The Octocat</h3>
-                        <a href="#">@octocat</a>
+                        <h3 id="name">The Octocat</h3>
+                        <a href="#" id="login">@octocat</a>
                     </div>
                     <div class="user-joined">
-                        <p>Joined 25 Jan 2011</p>
+                        <p id="created_at">Joined 25 Jan 2011</p>
                     </div>
                 </div>
                 <div class="user-bio">
-                    <p>This profile has no bio</p>
+                    <p id="bio">This profile has no bio</p>
                 </div>
                 <div class="user-repo-follows">
                     <div class="user-repos">
                         <span>Repos</span>
-                        <p>8</p>
+                        <p id="public_repos">8</p>
                     </div>
                     <div class="user-followers">
                         <span>Followers</span>
-                        <p>3938</p>
+                        <p id="followers">3938</p>
                     </div>
                     <div class="user-following">
                         <span>Following</span>
-                        <p>9</p>
+                        <p id="following">9</p>
                     </div>
                 </div>
                 <div class="user-links-orgs">
                     <div class="social-one">
                         <div class="user-city">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>San Francisco</span>
+                            <span id="location">San Francisco</span>
                         </div>
                         <div class="user-website">
                             <i class="fas fa-link"></i>
-                            <a href="#">https://github.blog</a>
+                            <a href="#" id="blog">https://github.blog</a>
                         </div>
                     </div>
                     <div class="social-two">
                         <div class="user-twitter">
                             <i class="fab fa-twitter"></i>
-                            <span>Not Available</span>
+                            <span id="twitter_username">Not Available</span>
                         </div>
                         <div class="user-company">
                             <i class="fas fa-building"></i>
-                            <span>@github</span>
+                            <span id="company">@github</span>
                         </div>
                     </div>
                 </div>
