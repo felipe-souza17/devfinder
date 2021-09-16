@@ -1,3 +1,11 @@
+/*
+    Company == null
+    blog == ""
+    twitter_username == null
+    location == null
+    bio == null
+*/
+
 let btnElement = document.getElementById("btnElement")
 
 const showData = result => {
@@ -6,22 +14,26 @@ const showData = result => {
         "May", "Jun", "Jul", "Aug",
         "Sep", "Oct", "Nov", "Dec"
     ]
-    let date = new Date(result['created_at'])
-    let year = date.getFullYear()
-    let month = months[date.getMonth()]
-    let day = date.getDate()
+    let created_at = new Date(result['created_at'])
+    let year = created_at.getFullYear()
+    let month = months[created_at.getMonth()]
+    let day = created_at.getDate()
 
+    for(let campo in result) {
+        if(document.querySelector("#"+campo)) {
+            document.querySelector("#"+campo).innerHTML = result[campo]
+            console.log(campo + "=" + result[campo])
+        }
+    }
     document.querySelector("#avatar_url").src = `${result['avatar_url']}`
-    document.querySelector("#name").innerHTML = `${result['name']}`
-    document.querySelector("#login").innerHTML = `@${result['login']}`
     document.querySelector("#created_at").innerHTML = `Joined ${day} ${month} ${year}`
-    document.querySelector("#bio").innerHTML = `${result['bio']}`
-    document.querySelector("#public_repos").innerHTML = `${result['public_repos']}`
-    document.querySelector("#followers").innerHTML = `${result['followers']}`
-    document.querySelector("#following").innerHTML = `${result['following']}`
-    document.querySelector("#location").innerHTML = `${result['location']}`
-    document.querySelector("#blog").innerHTML = `${result['blog']}`
-    document.querySelector("#company").innerHTML = `${result['company']}`
+
+    const adjustEmptyValues = () => {
+        if(!result['bio']) {
+            document.querySelector("#bio").innerHTML = "This profile has no bio"
+        }
+    }
+    adjustEmptyValues()
 }
 
 btnElement.addEventListener("click", e => {
