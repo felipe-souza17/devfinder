@@ -85,8 +85,11 @@ section {
     background-color: var(--desatured-blue);
     border-radius: 15px;
 }
+#user-not-found {
+    text-align: center;
+}
 .content {
-    display: flex;
+    display: none;
     padding: 40px;
 }
 .github-user-info {
@@ -104,7 +107,7 @@ section {
 
 .user-bio {
     margin: 20px 0;
-    color: var(--dark-gray);
+    color: var(--white);
 }
 
 .user-repo-follows {
@@ -127,6 +130,7 @@ section {
 
 .user-links-orgs {
     display: flex;
+    justify-content: space-around;
     margin: 25px 0;
     font-size: 18px;
 }
@@ -134,10 +138,7 @@ section {
      margin-right: 10px;
 }
 .user-links-orgs span {
-    color: var(--gray);
-}
-.social-one {
-    margin-right: 150px;
+    color: var(--white);
 }
 
 .github-image img {
