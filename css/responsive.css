@@ -1,0 +1,38 @@
+@media(max-width: 375px) {
+    body {
+        width: 350px;
+        margin: auto;
+    }
+    .btn-search input {
+        padding: 10px 15px;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .content {
+        padding: 20px;
+    }
+    .github-user-info {
+        margin: auto;
+    }
+
+    /* Image */
+    .github-image img {
+        height: 85px;
+        width: 85px;
+    }
+
+    /* User-About */
+    .user-about h3 {
+        font-size: 18px;
+    }
+    .user-about a, p {
+        font-size: 14px;
+    }
+
+    /* User-Orgs */
+    .user-links-orgs {
+        font-size: 11px;
+    }
+}
