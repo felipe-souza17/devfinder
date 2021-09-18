@@ -9,8 +9,6 @@
     .content {
         flex-direction: column;
         align-items: center;
-    }
-    .content {
         padding: 20px;
     }
     .github-user-info {
@@ -39,6 +37,28 @@
 @media(max-width: 375px) {
     body {
         width: 350px;
-        margin: auto;
+    }
+}
+@media(max-width: 320px) {
+    body {
+        width: 300px;
+        margin: 5vh auto;
+        overflow-y: scroll;
+    }
+    .btn-search input {
+        padding: 10px;
+    }
+    .input-user {
+        width: 155px;
+    }
+    .input-user::placeholder {
+        font-size: 12px;
+    }
+     /* User-About */
+     .user-about h3 {
+        font-size: 14px;
+    }
+    .user-about a, p {
+        font-size: 12px;
     }
 }
