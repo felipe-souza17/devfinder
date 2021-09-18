@@ -19,10 +19,15 @@ body {
     justify-content: center;
     width: 800px;
     margin: 15vh auto;
+    overflow: hidden;
 }
 a {
     color: var(--bright-blue);
     text-decoration: none;
+}
+input::placeholder {
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Header */
@@ -31,6 +36,7 @@ header {
     justify-content: space-between;
     align-items: center;
     color: var(--white);
+    animation: fade 1s;
 }
 header .title {
     font-size: 25px;
@@ -56,6 +62,7 @@ header i {
     border-radius: 15px;
     padding: 10px 15px;
     align-items: center;
+    animation: fade 2s;
 }
 .search-input i {
     color: var(--bright-blue);
@@ -84,6 +91,7 @@ header i {
 section {
     background-color: var(--desatured-blue);
     border-radius: 15px;
+    animation: fade 3s;
 }
 #user-not-found {
     text-align: center;
@@ -146,4 +154,41 @@ section {
     width: 125px;
     height: 125px;
     border-radius: 65px;
+}
+
+/* Squares */
+
+.squares li {
+    width: 40px;
+    height: 40px;
+    background-color:rgba(255, 255, 255, 0.15);
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    animation: up 2s infinite alternate;
+}
+
+/* Animações */
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    } 
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-950px) rotate(960deg);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+    to {
+        opacity: 1;
+    }
 }
