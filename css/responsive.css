@@ -1,6 +1,6 @@
-@media(max-width: 375px) {
+@media(max-width: 425px) {
     body {
-        width: 350px;
+        width: 390px;
         margin: auto;
     }
     .btn-search input {
@@ -34,5 +34,11 @@
     /* User-Orgs */
     .user-links-orgs {
         font-size: 11px;
+    }
+}
+@media(max-width: 375px) {
+    body {
+        width: 350px;
+        margin: auto;
     }
 }
