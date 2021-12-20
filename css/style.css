@@ -1,194 +1,210 @@
 :root {
-    --dark-blue: hsl(222,40%,13%);
-    --desatured-blue: hsl(223,39%,20%);
-    --bright-blue: hsl(211,99%,49%);
+  --dark-blue: hsl(222, 40%, 13%);
+  --desatured-blue: hsl(223, 39%, 20%);
+  --bright-blue: hsl(211, 99%, 49%);
 
-    --white: hsl(225,31%,92%);
-    --gray: hsl(219,14%,62%);
-    --dark-gray: hsl(225,19%,36%);
+  --white: hsl(225, 31%, 92%);
+  --gray: hsl(219, 14%, 62%);
+  --dark-gray: hsl(225, 19%, 36%);
+}
+:root.active {
+  --dark-blue: hsl(0, 0%, 85%);
+  --desatured-blue: hsl(0, 0%, 77%);
+  --white: hsl(211, 92%, 58%);
 }
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-    background-color: var(--dark-blue);
-    font-family: 'Poppins', sans-serif;
-    color: var(--white);
-    display: block;
-    justify-content: center;
-    width: 800px;
-    margin: 15vh auto;
-    overflow: hidden;
+  background-color: var(--dark-blue);
+  font-family: 'Poppins', sans-serif;
+  color: var(--white);
+  display: block;
+  justify-content: center;
+  width: 800px;
+  margin: 15vh auto;
+  transition: 0.5s;
+}
+body.active {
+  background-color: var(--white);
+  transition: 0.5s;
 }
 a {
-    color: var(--bright-blue);
-    text-decoration: none;
+  color: var(--bright-blue);
+  text-decoration: none;
 }
 input::placeholder {
-    color: var(--white);
-    font-family: 'Poppins', sans-serif;
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--white);
-    animation: fade 1s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  animation: fade 1s;
+  margin: 20px 0;
 }
 header .title {
-    font-size: 25px;
+  font-size: 25px;
+}
+.title.active {
+  color: var(--bright-blue);
 }
 header .dark-light-mode {
-    background-color: transparent;
-    border: none;
-    outline: 0;
-    color: var(--white);
-    font-weight: 700;
-    letter-spacing: 2px;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 2px;
 }
-header i {
-    margin-left: 10px;
+#toggle {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: var(--desatured-blue);
+  box-shadow: 0 2px 3px hsla(222, 84%, 12%, 0.52),
+    inset 0 2px 3px hsla(223, 81%, 14%, 0.253),
+    inset 0 -1px 1px hsla(223, 81%, 14%, 0.253);
+  cursor: pointer;
+  transition: 0.5s;
+}
+#toggle .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  transform: scale(0.9);
+  box-shadow: 0 2px 3px hsla(222, 55%, 31%, 0.52),
+    inset 0 1px 3px hsla(223, 81%, 14%, 0.253),
+    inset 0 1px 3px hsla(223, 81%, 14%, 0.253);
+  transition: 0.5s;
+}
+#toggle.active .indicator {
+  left: 30px;
 }
 
 /* Search Bar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    margin: 25px 0;
-    background-color: var(--desatured-blue);
-    border-radius: 15px;
-    padding: 10px 15px;
-    align-items: center;
-    animation: fade 2s;
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+  background-color: var(--desatured-blue);
+  border-radius: 15px;
+  padding: 10px 15px;
+  align-items: center;
+  animation: fade 2s;
+  transition: 0.5s;
 }
 .search-input i {
-    color: var(--bright-blue);
-    font-size: 20px;
-    margin-right: 10px;
+  color: var(--bright-blue);
+  font-size: 20px;
+  margin-right: 10px;
 }
 .search-input input {
-    background-color: transparent;
-    border: none;
-    outline: 0;
-    font-size: 15px;
-    color: var(--gray);
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  font-size: 15px;
+  color: var(--gray);
 }
 .btn-search input {
-    background-color: var(--bright-blue);
-    border: 0;
-    outline: 0;
-    border-radius: 10px;
-    color: var(--white);
-    font-size: 15px;
-    font-weight: 700;
-    padding: 13px 20px;
+  background-color: var(--bright-blue);
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 13px 20px;
 }
 
 /* User Info*/
 section {
-    background-color: var(--desatured-blue);
-    border-radius: 15px;
-    animation: fade 3s;
+  background-color: var(--desatured-blue);
+  border-radius: 15px;
+  animation: fade 3s;
+  transition: 0.5s;
 }
 #user-not-found {
-    text-align: center;
+  text-align: center;
 }
 .content {
-    display: none;
-    padding: 40px;
+  display: none;
+  padding: 40px;
+  margin: 25px 0;
 }
 .github-user-info {
-    width: 100%;
-    margin-left: 30px;
+  width: 100%;
+  margin-left: 30px;
 }
 .user-about {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .user-name h3 {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .user-bio {
-    margin: 20px 0;
-    color: var(--white);
+  margin: 20px 0;
+  color: var(--white);
 }
 
 .user-repo-follows {
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    padding: 15px 5px;
-    background-color: var(--dark-blue);
-    border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 15px 5px;
+  background-color: var(--dark-blue);
+  border-radius: 15px;
 }
 .user-repo-follows span {
-    font-size: 14px;
-    color: var(--gray);
+  font-size: 14px;
+  color: var(--gray);
 }
 .user-repo-follows p {
-    color: var(--white);
-    font-size: 20px;
-    font-weight: 700;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .user-links-orgs {
-    display: flex;
-    justify-content: space-around;
-    margin: 25px 0;
-    font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 0;
+  font-size: 18px;
 }
 .user-links-orgs i {
-     margin-right: 10px;
+  margin-right: 10px;
 }
 .user-links-orgs span {
-    color: var(--white);
+  color: var(--white);
 }
 
 .github-image img {
-    object-fit: cover;
-    width: 125px;
-    height: 125px;
-    border-radius: 65px;
-}
-
-/* Squares */
-
-.squares li {
-    width: 40px;
-    height: 40px;
-    background-color:rgba(255, 255, 255, 0.15);
-    display: block;
-    position: absolute;
-    bottom: -40px;
-    animation: up 2s infinite alternate;
-}
-
-/* Animações */
-@keyframes up {
-    from {
-        opacity: 0;
-        transform: translateY(0);
-    } 
-    50% {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-        transform: translateY(-950px) rotate(960deg);
-    }
+  object-fit: cover;
+  width: 125px;
+  height: 125px;
+  border-radius: 65px;
 }
 
 @keyframes fade {
-    from {
-        opacity: 0;
-        transform: translateX(-30%);
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  to {
+    opacity: 1;
+  }
 }

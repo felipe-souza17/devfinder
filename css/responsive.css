@@ -1,64 +1,71 @@
-@media(max-width: 425px) {
-    body {
-        width: 390px;
-        margin: auto;
-    }
-    .btn-search input {
-        padding: 10px 15px;
-    }
-    .content {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-    .github-user-info {
-        margin: auto;
-    }
-
-    /* Image */
-    .github-image img {
-        height: 85px;
-        width: 85px;
-    }
-
-    /* User-About */
-    .user-about h3 {
-        font-size: 18px;
-    }
-    .user-about a, p {
-        font-size: 14px;
-    }
-
-    /* User-Orgs */
-    .user-links-orgs {
-        font-size: 11px;
-    }
+@media (max-width: 850px) {
+  body {
+    width: 80%;
+    margin: auto;
+  }
 }
-@media(max-width: 375px) {
-    body {
-        width: 350px;
-    }
+@media (max-width: 425px) {
+  body {
+    width: 390px;
+    margin: auto;
+  }
+  .btn-search input {
+    padding: 10px 15px;
+  }
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .github-user-info {
+    margin: auto;
+  }
+
+  /* Image */
+  .github-image img {
+    height: 85px;
+    width: 85px;
+  }
+
+  /* User-About */
+  .user-about h3 {
+    font-size: 18px;
+  }
+  .user-about a,
+  p {
+    font-size: 14px;
+  }
+
+  /* User-Orgs */
+  .user-links-orgs {
+    font-size: 11px;
+  }
 }
-@media(max-width: 320px) {
-    body {
-        width: 300px;
-        margin: 5vh auto;
-        overflow-y: scroll;
-    }
-    .btn-search input {
-        padding: 10px;
-    }
-    .input-user {
-        width: 155px;
-    }
-    .input-user::placeholder {
-        font-size: 12px;
-    }
-     /* User-About */
-     .user-about h3 {
-        font-size: 14px;
-    }
-    .user-about a, p {
-        font-size: 12px;
-    }
+@media (max-width: 375px) {
+  body {
+    width: 350px;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    width: 300px;
+    margin: 5vh auto;
+  }
+  .btn-search input {
+    padding: 10px;
+  }
+  .input-user {
+    width: 155px;
+  }
+  .input-user::placeholder {
+    font-size: 12px;
+  }
+  /* User-About */
+  .user-about h3 {
+    font-size: 14px;
+  }
+  .user-about a,
+  p {
+    font-size: 12px;
+  }
 }
